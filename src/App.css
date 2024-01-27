@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #141d2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+p,
+input,
+button,
+img,
+body {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  width: 23.4375rem;
+  height: 48.5625rem;
+}

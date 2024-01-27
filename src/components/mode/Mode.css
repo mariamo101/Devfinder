@@ -1,0 +1,36 @@
+.Mode {
+  width: 327px;
+  height: 38px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.875rem;
+}
+#title {
+  color: #fff;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#Mode-Btn {
+  background-color: #141d2f;
+  width: 5.5rem;
+  display: flex;
+  height: 2.35rem;
+  padding-left: 0.1875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  text-align: right;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.15625rem;
+}
