@@ -1,23 +1,35 @@
 import "../mode/Mode.css";
 import { useEffect , useState } from "react";
 import sun from "../assets/icon-sun.svg"
+import moon from "../assets/icon-moon.svg"
 
 function Mode() {
   const[isDark , setIsDark]=useState(true);
+
   useEffect(() => {
     document.body.style.backgroundColor = isDark ? '#141d2f' : '#F6F8FF'; 
+    
   }, [isDark]);
 
-
-
   function onClick (){
-    setIsDark();  
+    setIsDark(!isDark);  
   }
+
     return <div className="Mode">
       <h1 id="title"> devfinder</h1>
   <button id="Mode-Btn" onClick={onClick}> 
-  LIGHT
-   <img src={sun} className="mode-icon" alt="sun-icon"/>
+  {isDark ? (
+    <>
+    LIGHT
+    <img src={sun} className="mode-icon" alt="sun-icon"/>
+    </>
+  ) : (
+    <>
+    DARK
+    <img src={moon} alt="moon-icon"  />
+  </>
+
+  )}
    </button>    
     </div>;
   }

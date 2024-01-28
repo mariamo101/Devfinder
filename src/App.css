@@ -17,6 +17,8 @@ body {
   padding: 0;
 }
 .App {
+  display: flex;
   width: 23.4375rem;
   height: 48.5625rem;
+  justify-content: center;
 }

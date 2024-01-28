@@ -3,7 +3,6 @@
   height: 38px;
   display: inline-flex;
   justify-content: center;
-  align-items: center;
   gap: 6.875rem;
 }
 #title {
