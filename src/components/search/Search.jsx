@@ -1,10 +1,31 @@
 import '../search/Search.css'
 import search from "../assets/icon-search.svg"
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 
 
-function Search() {
+//`https://api.github.com/users/:username`
+// "https://api.github.com/users/octocat"
+
+
+function Search({setTextError}) {
+  const [item , setItem] = useState({})
+
+  async function userSearch () {
+     let response = await fetch("https://api.github.com/users/octocat")
+      setItem(await response.json());
+  }
+  console.log(item);
+
   const [searchText, setSearchText] = useState('')
+
+  useEffect(() =>{
+    if(searchText === "text"){
+      setTextError("No results");
+    }else{
+      setTextError("")
+    }
+
+  },[searchText]);
 
   const onChange = (e) => {
     setSearchText(e.target.value);
@@ -25,7 +46,7 @@ function Search() {
       onChange={onChange}
       ></input>
       <button id='search-btn'
-      onClick={onClick}
+      onClick={userSearch}
       >Search </button>
     </div>;
   }

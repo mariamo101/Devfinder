@@ -2,7 +2,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: #141d2f;
+  background-color: #141d2f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,4 +22,12 @@ body {
   height: 48.5625rem;
   flex-direction: column;
   align-items: center;
+}
+.error-p {
+  margin-top: 2rem;
+  color: #f74646;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }

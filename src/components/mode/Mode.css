@@ -1,4 +1,5 @@
 #Mode {
+  font-family: "Space Mono";
   width: 327px;
   height: 38px;
   display: inline-flex;
@@ -18,7 +19,6 @@
   width: 5.5rem;
   display: flex;
   height: 2.35rem;
-  padding-left: 0.1875rem;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -33,16 +33,25 @@
   line-height: normal;
   letter-spacing: 0.15625rem;
 }
-.mode-icon img {
-  color: #90a4d4;
+.mode-icon-sun:hover path {
+  fill: #90a4d4;
+}
+.mode-icon-moon:hover path {
+  fill: #222731;
 }
 #Mode-Btn:hover {
   color: #90a4d4;
 }
-.dark-mode #Mode-Btn {
+.light-mode #Mode-Btn {
   background-color: #f6f8ff;
   color: #4b6a9b;
 }
-.dark-mode #title {
+.light-mode #title {
   color: #222731;
+}
+.light-mode #Mode-Btn:hover {
+  color: #222731;
+}
+.light-mode {
+  background-color: #f6f8ff;
 }

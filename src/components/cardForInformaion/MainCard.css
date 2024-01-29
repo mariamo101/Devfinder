@@ -1,12 +1,161 @@
 #MainCard {
+  font-family: "Space Mono";
   width: 20.4375rem;
   height: 32.3125rem;
   border-radius: 0.9375rem;
   background: #1e2a47;
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
 }
-.dark-mode #MainCard {
+.light-mode #MainCard {
   border-radius: 0.9375rem;
   background: #fefefe;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
+#user-info {
+  height: 70px;
+}
+#user-img {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 4.375rem;
+  margin-top: 2rem;
+}
+#name-joined {
+  margin: 2rem 3rem 1rem 1.5rem;
+}
+#name-joined p {
+  margin-bottom: 0.38rem;
+}
+.name {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.nick-name {
+  color: #0079ff;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.joined {
+  color: #fff;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#bio {
+  display: flex;
+  width: 17.4375rem;
+  align-items: center;
+  flex-direction: column;
+}
+.bio-info {
+  width: 17.4375rem;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem; /* 192.308% */
+  margin-bottom: 1.44rem;
+}
+#repos-followers {
+  width: 17.4375rem;
+  height: 5.3125rem;
+  border-radius: 0.625rem;
+  background: #141d2f;
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.follower {
+  width: 17.4375rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.7rem;
+}
+.result {
+  width: 17.4375rem;
+  display: flex;
+}
+.result p {
+  width: 5.5625rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.repos,
+.followers,
+.following {
+  height: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#urls {
+  width: 17.4375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+.urls-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+#urls a {
+  color: #fff;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.light-mode #repos-followers {
+  background: #f6f8ff;
+}
+.light-mode .name,
+.light-mode .result p {
+  color: #2b3442;
+}
+.light-mode .joined,
+.light-mode .bio-info,
+.light-mode .follower p,
+.light-mode #urls a {
+  color: #697c9a;
+}
+.light-mode #urls svg path {
+  fill: #90a4d4;
+}
+
+/* @media screen and (min-width: 1200px) {
+  #MainCard {
+    width: 45.625rem;
+    height: 26.1875rem;
+    justify-content: flex-end;
+  }
+  #bio {
+    width: 400px;
+  }
+  #user-img {
+    display: flex;
+  }
+  #name-joined {
+    display: flex;
+  }
+} */
