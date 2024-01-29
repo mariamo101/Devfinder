@@ -1,9 +1,10 @@
-.Mode {
+#Mode {
   width: 327px;
   height: 38px;
   display: inline-flex;
   justify-content: center;
   gap: 6.875rem;
+  margin-top: 1.94rem;
 }
 #title {
   color: #fff;
@@ -12,7 +13,6 @@
   font-weight: 700;
   line-height: normal;
 }
-
 #Mode-Btn {
   background-color: #141d2f;
   width: 5.5rem;
@@ -32,4 +32,17 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.15625rem;
+}
+.mode-icon img {
+  color: #90a4d4;
+}
+#Mode-Btn:hover {
+  color: #90a4d4;
+}
+.dark-mode #Mode-Btn {
+  background-color: #f6f8ff;
+  color: #4b6a9b;
+}
+.dark-mode #title {
+  color: #222731;
 }

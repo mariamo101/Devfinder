@@ -1,7 +1,7 @@
 import '../cardForInformaion/MainCard.css'
 
 function MainCard() {
-    return <div className="MainCard"></div>;
+    return <div id="MainCard"></div>;
   }
   
   export default MainCard;

@@ -20,5 +20,6 @@ body {
   display: flex;
   width: 23.4375rem;
   height: 48.5625rem;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

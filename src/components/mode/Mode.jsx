@@ -9,13 +9,15 @@ function Mode() {
   useEffect(() => {
     document.body.style.backgroundColor = isDark ? '#141d2f' : '#F6F8FF'; 
     
+    
   }, [isDark]);
 
   function onClick (){
     setIsDark(!isDark);  
+    document.body.classList.toggle("dark-mode");
   }
 
-    return <div className="Mode">
+    return <div id="Mode">
       <h1 id="title"> devfinder</h1>
   <button id="Mode-Btn" onClick={onClick}> 
   {isDark ? (
@@ -26,7 +28,7 @@ function Mode() {
   ) : (
     <>
     DARK
-    <img src={moon} alt="moon-icon"  />
+    <img src={moon}  className="mode-icon" alt="moon-icon"  />
   </>
 
   )}
@@ -35,3 +37,4 @@ function Mode() {
   }
   
   export default Mode;
+
