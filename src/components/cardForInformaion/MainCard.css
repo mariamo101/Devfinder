@@ -119,7 +119,8 @@
   display: flex;
   gap: 1.2rem;
 }
-#urls a {
+#urls a,
+#urls p {
   color: #fff;
   font-size: 0.8125rem;
   font-style: normal;
@@ -135,12 +136,18 @@
 }
 .light-mode .joined,
 .light-mode .bio-info,
-.light-mode .follower p,
-.light-mode #urls a {
+.light-mode .follower p {
+  color: #697c9a;
+}
+.light-mode #urls a,
+.light-mode #urls p {
   color: #697c9a;
 }
 .light-mode #urls svg path {
   fill: #90a4d4;
+}
+.light-mode .nick-name {
+  color: #0079ff;
 }
 
 /* @media screen and (min-width: 1200px) {
