@@ -60,7 +60,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.5625rem; /* 192.308% */
-  margin-bottom: 1.44rem;
+  margin: 1rem 0 1.44rem 0;
 }
 #repos-followers {
   width: 17.4375rem;
