@@ -18,8 +18,10 @@
 #head-section {
   display: flex;
   align-items: center;
+  width: 17rem;
 }
-#user-img {
+
+.user-img {
   width: 4.375rem;
   height: 4.375rem;
   border-radius: 4.375rem;
@@ -36,6 +38,7 @@
   line-height: normal;
 }
 .nick-name {
+  margin-bottom: 0.5rem;
   color: #0079ff;
   font-size: 0.8125rem;
   font-style: normal;
@@ -55,6 +58,7 @@
 }
 .bio-info {
   width: 17.4375rem;
+  height: 25px;
   color: #fff;
   font-size: 0.8125rem;
   font-style: normal;
@@ -158,15 +162,17 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 1.25rem;
+    margin: 0;
+    height: 5rem;
   }
-  #user-img {
+  .user-img {
     width: 7.3125rem;
-    /* height: 7.3125rem; */
-    margin-left: 3rem;
+    height: 7.3125rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
   }
   .u-info {
-    margin-top: 0;
+    margin-top: 1.25rem;
     margin-right: 3rem;
     width: 29rem;
     display: flex;
@@ -200,17 +206,19 @@
   }
   .bio-info {
     width: 30rem;
+    height: 50px;
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5625rem;
+    margin: 1rem 0 1rem 0;
   }
   #repos-followers {
     width: 30rem;
     height: 5.3125rem;
   }
   #footer-section {
-    width: 30rem;
+    width: 33rem;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;

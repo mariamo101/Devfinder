@@ -1,40 +1,23 @@
 import '../search/Search.css'
 import search from "../assets/icon-search.svg"
-import { useState , useEffect } from 'react';
+import { useState } from 'react';
 
-
-//`https://api.github.com/users/:username`
-// "https://api.github.com/users/octocat"
-
-
-function Search({setTextError , item , setItem}) {
+function Search({setTextError , setItem}) {
    const [searchText, setSearchText] = useState('')
 
    async function userSearch () {
-    let response = await fetch("https://api.github.com/users/:usernameee")
+    const response = await fetch("https://api.github.com/users/" +searchText)
      setItem(await response.json());
- }
- console.log(item);
-
-
-  useEffect(() =>{
-    if(searchText === "text"){
+     if(response.status === 404){
       setTextError("No results");
-    }else{
-      setTextError("")
+      setSearchText("");
+     }else{
+      setTextError("");
     }
-
-  },[searchText,setTextError]);
-
+     }
   const onChange = (e) => {
     setSearchText(e.target.value);
-    console.log(e.target.value)
   }
-  // const onClick =()=>{
-  //   setSearchText(searchText);
-  //   setSearchText('')
-  //   console.log(searchText);
-  // }
     return <div id="Search">
       <img  src={search} id='search-icon' alt='search-icon'></img>
       <input 
@@ -42,11 +25,12 @@ function Search({setTextError , item , setItem}) {
       type='text'
       placeholder='Search GitHub username…'
       value={searchText}
-      onChange={onChange}
-      ></input>
-      <button id='search-btn'
-      onClick={userSearch}
-      >Search </button>
+      onChange={onChange}>
+      </input>
+      <button 
+      id='search-btn'
+      onClick={userSearch}> Search 
+        </button>
     </div>;
   }
   
