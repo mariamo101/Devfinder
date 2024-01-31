@@ -1,38 +1,48 @@
 import '../cardForInformaion/MainCard.css'
-import cat from "../assets/icon-company.svg"
+import cat from "../assets/Oval.svg"
 
 
-function MainCard() {
+function MainCard({avatar}) {
     return <div id="MainCard">
 
-      <div id='user-img'>
+<div id='head-section'>
+<div id='user-img'>
       <img src={cat} alt='octocat'/>
       </div>
-   <div id='name-joined'>
-          <p className='name'>The Octocat</p>
+    
+   <div className='u-info'>
+    <div className='name'>
+          <p className='uname'>The Octocat</p>
           <p className='nick-name'>@octocat</p>
-          <p className='joined'>Joined 25 Jan 2011</p>
-       
+          </div>
+        <div className='joined'>
+          <p className='joinedP'>Joined 25 Jan 2011</p>
+          </div>
+          </div>
         </div>
+        
 
-        <div id='bio'>
+        <div id='main-section'>
           <p className='bio-info'>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
           </p>
         <div id='repos-followers'>
-          <div className='follower'>
+          <div className='section'>
           <p className='repos'>Repos</p>
+          <p className='number'>8</p>
+          </div>
+          <div className='section'>
           <p className='followers'>Followers</p>
+          <p className='number'>3938</p>
+          </div>
+          <div className='section'>
           <p className='following'>Following</p>
-          </div>
-          <div className='result'>
-          <p>8</p>
-          <p>3938</p>
-          <p>9</p>
+          <p className='number'>8</p>
           </div>
         </div>
         </div>
-        <div id='urls'>
+
+        <div id='footer-section'>
           <div className='urls-icons'>
             <svg  className='icon-loc' height="20" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M12.797 3.425C11.584 1.33 9.427.05 7.03.002a7.483 7.483 0 00-.308 0C4.325.05 2.17 1.33.955 3.425a6.963 6.963 0 00-.09 6.88l4.959 9.077.007.012c.218.38.609.606 1.045.606.437 0 .828-.226 1.046-.606l.007-.012 4.96-9.077a6.963 6.963 0 00-.092-6.88zm-5.92 5.638c-1.552 0-2.813-1.262-2.813-2.813s1.261-2.812 2.812-2.812S9.69 4.699 9.69 6.25 8.427 9.063 6.876 9.063z" fill="#fff"/></svg>
           <p className='location'>San Francisco</p>

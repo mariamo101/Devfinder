@@ -55,3 +55,12 @@
 .light-mode {
   background-color: #f6f8ff;
 }
+
+@media screen and (min-width: 1200px) {
+  #Mode {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32.75rem;
+  }
+}

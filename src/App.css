@@ -31,3 +31,16 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+@media screen and (min-width: 1200px) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+  }
+  .error-p {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

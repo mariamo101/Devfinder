@@ -59,3 +59,26 @@
 #search-btn:hover {
   background-color: #60abff;
 }
+
+@media screen and (min-width: 1200px) {
+  #Search {
+    width: 45.625rem;
+    height: 4.3125rem;
+    justify-content: space-between;
+  }
+  #search-input {
+    width: 70%;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem;
+  }
+  #search-btn {
+    width: 6.625rem;
+    height: 3.125rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

@@ -7,16 +7,15 @@ import { useState , useEffect } from 'react';
 // "https://api.github.com/users/octocat"
 
 
-function Search({setTextError}) {
-  const [item , setItem] = useState({})
+function Search({setTextError , item , setItem}) {
+   const [searchText, setSearchText] = useState('')
 
-  async function userSearch () {
-     let response = await fetch("https://api.github.com/users/octocat")
-      setItem(await response.json());
-  }
-  console.log(item);
+   async function userSearch () {
+    let response = await fetch("https://api.github.com/users/:usernameee")
+     setItem(await response.json());
+ }
+ console.log(item);
 
-  const [searchText, setSearchText] = useState('')
 
   useEffect(() =>{
     if(searchText === "text"){
@@ -25,17 +24,17 @@ function Search({setTextError}) {
       setTextError("")
     }
 
-  },[searchText]);
+  },[searchText,setTextError]);
 
   const onChange = (e) => {
     setSearchText(e.target.value);
     console.log(e.target.value)
   }
-  const onClick =()=>{
-    setSearchText(searchText);
-    setSearchText('')
-    console.log(searchText);
-  }
+  // const onClick =()=>{
+  //   setSearchText(searchText);
+  //   setSearchText('')
+  //   console.log(searchText);
+  // }
     return <div id="Search">
       <img  src={search} id='search-icon' alt='search-icon'></img>
       <input 

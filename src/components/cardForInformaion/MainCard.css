@@ -15,8 +15,9 @@
   background: #fefefe;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
-#user-info {
-  height: 70px;
+#head-section {
+  display: flex;
+  align-items: center;
 }
 #user-img {
   width: 4.375rem;
@@ -24,13 +25,10 @@
   border-radius: 4.375rem;
   margin-top: 2rem;
 }
-#name-joined {
-  margin: 2rem 3rem 1rem 1.5rem;
+.u-info {
+  margin: 2rem 0rem 0rem 1.5rem;
 }
-#name-joined p {
-  margin-bottom: 0.38rem;
-}
-.name {
+.uname {
   color: #fff;
   font-size: 1rem;
   font-style: normal;
@@ -51,10 +49,8 @@
   font-weight: 400;
   line-height: normal;
 }
-#bio {
+#main-section {
   display: flex;
-  width: 17.4375rem;
-  align-items: center;
   flex-direction: column;
 }
 .bio-info {
@@ -73,29 +69,16 @@
   background: #141d2f;
   display: flex;
   margin-bottom: 1.5rem;
+  flex-direction: row;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.follower {
-  width: 17.4375rem;
-  display: flex;
   justify-content: space-around;
-  margin-bottom: 0.7rem;
 }
-.result {
-  width: 17.4375rem;
-  display: flex;
-}
-.result p {
-  width: 5.5625rem;
-  color: #fff;
+.section {
   text-align: center;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
+  gap: 0.5rem;
+  display: flex;
+  margin-bottom: 0.7rem;
+  flex-direction: column;
 }
 .repos,
 .followers,
@@ -108,7 +91,16 @@
   font-weight: 400;
   line-height: normal;
 }
-#urls {
+.number {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+#footer-section {
   width: 17.4375rem;
   display: flex;
   flex-direction: column;
@@ -119,8 +111,8 @@
   display: flex;
   gap: 1.2rem;
 }
-#urls a,
-#urls p {
+#footer-section a,
+#footer-section p {
   color: #fff;
   font-size: 0.8125rem;
   font-style: normal;
@@ -130,39 +122,98 @@
 .light-mode #repos-followers {
   background: #f6f8ff;
 }
-.light-mode .name,
-.light-mode .result p {
+.light-mode .uname,
+.light-mode .number {
   color: #2b3442;
 }
 .light-mode .joined,
 .light-mode .bio-info,
-.light-mode .follower p {
+.light-mode .repos,
+.light-mode .followers,
+.light-mode .following {
   color: #697c9a;
 }
-.light-mode #urls a,
-.light-mode #urls p {
+.light-mode #footer-section a,
+.light-mode #footer-section p {
   color: #697c9a;
 }
-.light-mode #urls svg path {
+.light-mode #footer-section svg path {
   fill: #90a4d4;
 }
 .light-mode .nick-name {
   color: #0079ff;
 }
 
-/* @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   #MainCard {
     width: 45.625rem;
     height: 26.1875rem;
-    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
   }
-  #bio {
-    width: 400px;
+  #head-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1.25rem;
   }
   #user-img {
-    display: flex;
+    width: 7.3125rem;
+    /* height: 7.3125rem; */
+    margin-left: 3rem;
   }
-  #name-joined {
+  .u-info {
+    margin-top: 0;
+    margin-right: 3rem;
+    width: 29rem;
     display: flex;
+    justify-content: space-between;
   }
-} */
+  .uname {
+    width: 11rem;
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .nick-name {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .joined {
+    text-align: right;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .joinedP {
+    margin-top: 0.5rem;
+  }
+  #main-section {
+    margin-right: 3rem;
+  }
+  .bio-info {
+    width: 30rem;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem;
+  }
+  #repos-followers {
+    width: 30rem;
+    height: 5.3125rem;
+  }
+  #footer-section {
+    width: 30rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+}
