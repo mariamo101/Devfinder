@@ -28,4 +28,8 @@ Users should be able to:
 
 ### Links
 
+- Live Site URL: [Live site URL here](https://devfinder-roan.vercel.app/)
+
 ### Screenshot
+
+<img width="1012" alt="Screenshot 2024-02-01 at 16 44 38" src="https://github.com/mariamo101/Devfinder/assets/117212859/55c3270c-6950-440a-b7d2-a1384d037d19">
