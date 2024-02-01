@@ -116,13 +116,13 @@
   display: flex;
   gap: 1.2rem;
 }
-#footer-section a,
 #footer-section p {
   color: #fff;
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 }
 .light-mode #repos-followers {
   background: #f6f8ff;
