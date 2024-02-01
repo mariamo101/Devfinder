@@ -113,8 +113,10 @@
   margin-bottom: 1rem;
 }
 .urls-icons {
+  min-width: 10rem;
   display: flex;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 #footer-section p {
   color: #fff;
