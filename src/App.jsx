@@ -7,6 +7,7 @@ import { useState , useEffect } from "react";
 function App() {
   const [textError , setTextError] = useState('');
   const [item , setItem] = useState({});
+  const[ mainCar , setMainCard]=useState(true);
 
   async function userSearch () {
     const response = await fetch("https://api.github.com/users/octocat")
@@ -17,11 +18,12 @@ function App() {
  },[setItem]);
 
  console.log(item)
-
+ 
   return <div className="App">
     <Mode/>
     <p className="error-p"> {textError} </p>
-    <Search setTextError={setTextError} setItem={setItem}/>
+    <Search setTextError={setTextError} setItem={setItem} setMainCard={setMainCard}/>
+    {mainCar?  
     <MainCard 
     avatar = {item.avatar_url} 
     company={item.company}
@@ -36,6 +38,8 @@ function App() {
     blog={item.blog} 
     twitter={item.twitter_usernam}
     />
+   : " "
+}
   </div>;
 }
 export default App;

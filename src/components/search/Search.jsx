@@ -2,8 +2,9 @@ import '../search/Search.css'
 import search from "../assets/icon-search.svg"
 import { useState } from 'react';
 
-function Search({setTextError , setItem}) {
+function Search({setTextError , setItem,setMainCard}) {
    const [searchText, setSearchText] = useState('')
+ 
 
    async function userSearch () {
     const response = await fetch("https://api.github.com/users/" +searchText)
@@ -11,9 +12,12 @@ function Search({setTextError , setItem}) {
      if(response.status === 404){
       setTextError("No results");
       setSearchText("");
+      setMainCard(false);
      }else{
+      setMainCard(true);
       setTextError("");
     }
+
      }
   const onChange = (e) => {
     setSearchText(e.target.value);
@@ -34,5 +38,5 @@ function Search({setTextError , setItem}) {
     </div>;
   }
   
-  export default Search;
+  export default Search ;
   
