@@ -23,6 +23,7 @@ body {
   height: 48.5625rem;
   width: 23.4375rem;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 .error-p {
   margin-top: 2rem;
