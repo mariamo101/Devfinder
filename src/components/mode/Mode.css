@@ -56,7 +56,7 @@
   background-color: #f6f8ff;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
   #Mode {
     display: inline-flex;
     justify-content: center;

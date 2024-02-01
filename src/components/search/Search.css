@@ -60,7 +60,7 @@
   background-color: #60abff;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
   #Search {
     width: 45.625rem;
     height: 4.3125rem;
